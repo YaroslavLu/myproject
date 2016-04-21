@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>Форма реєстрації</title>
+  <style type="text/css">
+    .box{
+    width: 300px;
+    height: 100px;
+    }
+    .box1{
+    width: 350px;
+    padding: 25px;
+    border: 1px solid grey;
+    margin-left: 450px;
+    position: relative;
+    }
+    input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+     }
+    </style>
+    </head>
+      <body>
+      <div class="box"></div>
+        <div class="box1">
+          <h2> Введіть пароль</h2>
+        <FORM>
+         <label for="fname">Login</label>
+         <INPUT  id="login" TYPE="text" NAME="string" SIZE=15 ><BR><BR>
+          <BR>
+         <label for="fname">Password</label>
+         <INPUT  id="password" TYPE="text" NAME="result" SIZE=15 ><br><br>
+         <INPUT  TYPE="button" VALUE="Login" ONCLICK="compute()">
+         </FORM>
+      </div>
+      <script>
+      function compute(){
+        var login=document.getElementById("login").value;
+        var password=document.getElementById("password").value;
+        if(password.length<8){
+          alert("Введіть більше 8 символів");
+        }
+         else
+          if (login.length<3||login.length>15)
+            {
+          alert("Введіть логін більше 3 і менше 15 символів");
+        }
+        else 
+          if(!isNaN(password))
+          {
+         alert("Пароль не повинен вміщувати одні цифри");
+          }
+          else 
+         document.location.href = 'workstor.html' ;
+      }
+
+      </script>
+   </body>
+</html>
