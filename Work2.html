@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta  name="viewport" content="width=device-width initial-scale=1.0"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script type="text/javascript">
+   $(document). ready (function (){
+  function init() {
+    if (localStorage["name"]) {
+      $('#name').val(localStorage["name"]);
+    }
+    if (localStorage["lastname"]) {
+         $('#lastname').val(localStorage["lastname"]);
+    }
+    if (localStorage["born"]) {
+      $('#born').val(localStorage["born"]);
+    }
+    if (localStorage["fon"]) {
+      $('#fon').val(localStorage["fon"]);
+    }
+    if (localStorage["zic"]) {
+      $('#zic').val(localStorage["zic"]);
+    }
+     if (localStorage["email"]) {
+      $('#email').val(localStorage["email"]);
+    }
+    if (localStorage["adress"]) {
+      $('#adress').val(localStorage["adress"]);
+    }
+    if (localStorage["stored"]) {
+      $('#stored').val(localStorage["stored"]);
+    }
+     if (localStorage["interest"]) {
+      $('#interest').val(localStorage["interest"]);
+    }
+  }
+  init();
+});
+$('.stored').keyup(function () {
+  localStorage[$(this).attr('name')] = $(this).val();
+});
+$('#localStorageTest').submit(function() {
+  localStorage.clear();
+});
+</script>
+  <title> Work</title>
+  <style type="text/css"> 
+  .header{
+    background-color: white;
+    height: 50px;
+    width: 1290px;
+    padding:25px;
+    border: 1px solid grey;
+    margin-bottom: 8px;
+    }
+    .nav{
+     background: #d1e0e0;
+     width: 1340px;
+     height: 30px;
+     border:1px solid grey;
+     margin-bottom: 1px;
+     }
+      .aside{
+      background:#b3cccc;
+      border: 1px solid grey;
+      float: left;
+      width:200px;
+      height:620px;
+      margin-top: 5px;
+     }
+       .section{
+      background:#f0f5f5;
+      border: 1px solid grey;
+      padding: 10px;
+      float: left;
+      width:1104px;
+      height:600px;
+      margin-left: 5px;
+      margin-top: 5px;
+     }
+     
+       .footer{
+     background: white;
+     margin-top: 5px;
+     float: left;
+     width: 1340px;
+     height:30px; 
+     text-align:center;
+     border: 1px solid grey;
+     }
+  </style>
+  </head>
+  <body>
+        <header class="header"></header>
+           <nav  class="nav"></nav>
+             <aside class="aside">
+             <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem</p>
+           </aside>
+         <section class="section">
+            <article>
+             <h2>Анкета користувача</h2>
+             <form id="localStorageTest" method="post" action="">
+             <label>Ваше ім'я</label>
+             <input type="text" name="Ваше ім'я" id="name" class="stored" value="" size="25"/>
+             <label>Ваше прізвище</label>
+             <input type="text" name="Ваше прізвище" id="lastname" class="stored" value="" size="25"><br>
+             <p><label>Дата народження</label>
+             <input type="text" name="Ваше прізвище" id="born" class="stored" value="" size="10"><br>
+             <p><label>Контактний номер телефону</label>
+             <input type="text" name="Контактний номер телефону" id="fon" class="stored" value="" max="9" size="9"/>
+           </p>
+             <p><label>Поштовий індекс</label>
+             <input type="text" name="Поштовий індекс" id="zic" class="stored" value="" maxlength="5" size="10"/>
+           </p>
+             <label>e-mail</label><br>
+             <input type="text" name="e-mail" id="email" class="stored" value="" size="20"/>
+             <p><label>Адреса</label><br>
+             <input type="text" name="Адреса" id="adress" class="stored" value=""size="60"/>
+           </p>
+             <p><label>Ваші навики</label><br>
+             <input type="text" name="Ваші навики" id="work" class="stored" value="" size="60"/></p>
+           </p>
+             <p><label>Інтереси</label><br>
+             <input type="text" name="Інтереси" id="interest" class="stored" value="" size="60"/>
+           </p>
+             <input type="submit" class="demo-button"value="Відправити">
+             <input type="reset" value="Очистити"></p>
+             </form>
+            </article>
+          </section>
+        <footer class="footer">© 2016. Y.Lukey</footer>
+  </body>
+</html>
